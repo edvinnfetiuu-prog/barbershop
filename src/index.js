@@ -25,7 +25,7 @@ app.use(passport.session())
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: 'https://barbershop-production-9507.up.railway.app/api/auth/google/callback'
+  callbackURL: 'https://testrail.netlify.app/callback.html'
 }, async (accessToken, refreshToken, profile, done) => {
   try {
     const email = profile.emails[0].value
